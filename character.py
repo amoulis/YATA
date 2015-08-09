@@ -31,4 +31,12 @@ class Character:
 		else:
 			return 0
 
-	def status(self)
+	def status(self):
+		if self._shield > 0:
+			print("Shield: " + str(self._shield))
+		else:
+			print("[WARN] shield broken !")
+		print("Strengh: " + str(self._strength))
+		print("Life: " + str(self._life))
+		print("Dodge: " + str(self._dodge))
+		print("XP: " + str(self._xp))
