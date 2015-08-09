@@ -16,6 +16,8 @@ while player._life > 0 and order!="quit":
 	if order == "move":
 		if player.isEnergyEmpty():
 			print("You have no more energy. You will die alone drifting in space")
+			event.gameOver()
+			break;
 		else:
 			player._energy = player._energy-1
 			rand_event = random.randint(1,3)

@@ -8,3 +8,6 @@ def eventBattle():
 
 def eventSpaceStation():
 	print("Welcome to a friendly space station. You can do some business here")
+
+def gameOver():
+	print("It's game over, man ! Game Over !")
