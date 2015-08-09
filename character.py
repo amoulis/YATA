@@ -1,9 +1,17 @@
+"""
+This class defines what a character is (player or PNJ) with different attributes
+- life: when hits 0 the cahracter is dead
+- shield : takes ammages before life does
+- xp : is earned after combat and changes damages and dodge (TODO)
+"""
+
 class Character:
 
-	def __init__(self, life=5, strength=5, shield=5, xp=0):
+	def __init__(self, life=5, strength=5, shield=5, xp=0, dodge = 0):
 		self._life = life
 		self._strength = strength
 		self._shield = shield
+		self._dodge = dodge
 		self._xp = xp
 
 	def getDamages(self, damages):
@@ -22,3 +30,5 @@ class Character:
 			return 1
 		else:
 			return 0
+
+	def status(self)
