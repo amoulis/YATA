@@ -1,18 +1,18 @@
 class Character:
 
-	def __init__(self, life=5, strength=5, armor=5, xp=0):
+	def __init__(self, life=5, strength=5, shield=5, xp=0):
 		self._life = life
 		self._strength = strength
-		self._armor = armor
+		self._shield = shield
 		self._xp = xp
 
 	def getDamages(self, damages):
-		self._armor = self._armor - damages
-		# if damages exceeded armor, dealt damages to life
-		if self._armor != 0 & self._armor < 0:
-			self._life = self.life + self._armor; # because armor < 0 no need to use '-'
-			self._armor = 0
-			print("[WARN] Armor broken !")
+		self._shield = self._shield - damages
+		# if damages exceeded shield, dealt damages to life
+		if self._shield != 0 & self._shield < 0:
+			self._life = self.life + self._shield; # because shield < 0 no need to use '-'
+			self._shield = 0
+			print("[WARN] shield broken !")
 
 	def dealtDamages(self):
 		return self._strength

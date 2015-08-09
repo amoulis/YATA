@@ -6,6 +6,5 @@ import character
 player = character.Character()
 ennemy = character.Character(5, 1, 5, 0)
 
-
 player.getDamages(ennemy.dealtDamages())
-print(player._armor)
+print(player._shield)
