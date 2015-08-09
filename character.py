@@ -7,12 +7,13 @@ This class defines what a character is (player or PNJ) with different attributes
 
 class Character:
 
-	def __init__(self, life=5, strength=5, shield=5, xp=0, dodge = 0):
+	def __init__(self, life=5, strength=5, shield=5, xp=0, dodge=0, energy=100):
 		self._life = life
 		self._strength = strength
 		self._shield = shield
 		self._dodge = dodge
 		self._xp = xp
+		self._energy = energy
 
 	def getDamages(self, damages):
 		self._shield = self._shield - damages
@@ -31,11 +32,20 @@ class Character:
 		else:
 			return 0
 
+	def isEnergyEmpty(self):
+		if self._energy == 0:
+			return True
+		else:
+			return False
+
 	def status(self):
 		if self._shield > 0:
 			print("Shield: " + str(self._shield))
 		else:
 			print("[WARN] shield broken !")
+		if self._energy < 10:
+			print("[WARN] energy low")
+		print("Energy: " + str(self._energy))
 		print("Strengh: " + str(self._strength))
 		print("Life: " + str(self._life))
 		print("Dodge: " + str(self._dodge))
