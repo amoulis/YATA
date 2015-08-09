@@ -6,13 +6,14 @@ class Character:
 		self._armor = armor
 		self._xp = xp
 
-	def getDamages(self, damages)
+	"""def getDamages(self, damages)
 
-		if(armor >= damages)
+		if armor >= damages:
 			armor = armor - 5
-
+		else if armor < damages && 
+		"""
 	def isAlive(self):
-		if life == 0
+		if life == 0:
 			return 1
-		else
+		else:
 			return 0
