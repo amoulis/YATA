@@ -7,5 +7,8 @@ def critical(str):
 def information(str):
 	print("[INFO] " + str)
 
-def success(str)
+def success(str):
 	print("[SUCC] " + str)
+
+def failure(str):
+	print("[FAIL] " + str)
