@@ -26,9 +26,9 @@ while player._life > 0 and order!="quit":
 			if rand_event == 1:
 				success = event.eventNothing()
 			elif rand_event == 2:
-				success = event.eventBattle()
+				success = event.eventBattle(player)
 			else:
-				success = event.eventSpaceStation()
+				success = event.eventSpaceStation(player)
 	elif order == "repare":
 		print("reparing...")
 	elif order == "save":
@@ -37,5 +37,5 @@ while player._life > 0 and order!="quit":
 		if order != "quit":
 			print("Sorry not a valid option. Try again please")
 
-	if player._life == 0 or sucess == False:
+	if player._life == 0 or success == False:
 		event.gameOver()

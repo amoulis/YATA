@@ -1,3 +1,4 @@
+import character
 
 def eventNothing():
 	print("The planet you found is empty, nothing to be done")
@@ -26,7 +27,7 @@ def eventBattle(player):
 		log.debug("Should not happen")
 		return False
 
-def eventSpaceStation():
+def eventSpaceStation(player):
 	print("Welcome to a friendly space station. You can do some business here")
 	return True
 
