@@ -41,7 +41,7 @@ class Character:
 			return False
 
 	def status(self):
-		log.infprmation("Status of: " + name)
+		log.information("Status of: " + name)
 		if self._shield > 0:
 			log.information("Shield: " + str(self._shield))
 		else:
