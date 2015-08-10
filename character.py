@@ -65,3 +65,6 @@ class Character:
 		log.information("Life: " + str(self._life))
 		log.information("Dodge: " + str(self._dodge))
 		log.information("XP: " + str(self._xp))
+
+	def earnXP(self, val):
+		self._xp = self._xp + val

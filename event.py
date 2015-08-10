@@ -35,6 +35,7 @@ def eventBattle(player):
 
 	if ennemy._life == 0 and player._life != 0:
 		log.success("You defeated the ennemy !")
+		player.earnXP(10)
 		return True
 	elif player._life == 0 and ennemy._life != 0:
 		log.failure("You've been defeated !")
