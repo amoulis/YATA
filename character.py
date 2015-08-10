@@ -40,7 +40,7 @@ class Character:
 
 	def status(self):
 		if self._shield > 0:
-			log.info("Shield: " + str(self._shield))
+			log.information("Shield: " + str(self._shield))
 		else:
 			log.warning("shield broken !")
 		if self._energy < 10 and self._energy > 0:
@@ -48,8 +48,8 @@ class Character:
 		elif self._energy == 0:
 			log.critical("Energy Empty")
 
-		log.info("Energy: " + str(self._energy))
-		log.info("Strengh: " + str(self._strength))
-		log.info("Life: " + str(self._life))
-		log.info("Dodge: " + str(self._dodge))
-		log.info("XP: " + str(self._xp))
+		log.information("Energy: " + str(self._energy))
+		log.information("Strengh: " + str(self._strength))
+		log.information("Life: " + str(self._life))
+		log.information("Dodge: " + str(self._dodge))
+		log.information("XP: " + str(self._xp))
