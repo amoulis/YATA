@@ -21,7 +21,7 @@ class Character:
 		if self._shield != 0 & self._shield < 0:
 			self._life = self.life + self._shield; # because shield < 0 no need to use '-'
 			self._shield = 0
-			print("[WARN] shield broken !")
+			log.warning("shield broken !")
 
 	def dealtDamages(self):
 		return self._strength
@@ -40,7 +40,7 @@ class Character:
 
 	def status(self):
 		if self._shield > 0:
-			print("Shield: " + str(self._shield))
+			log.info("Shield: " + str(self._shield))
 		else:
 			log.warning("shield broken !")
 		if self._energy < 10 and self._energy > 0:
