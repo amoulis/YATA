@@ -12,3 +12,6 @@ def success(str):
 
 def failure(str):
 	print("[FAIL] " + str)
+
+def debug(str):
+	print("[DEBUG] " + str)
