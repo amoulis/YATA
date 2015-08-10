@@ -25,6 +25,12 @@ class Character:
 			self._shield = 0
 			log.warning("shield broken !")
 
+		if self._life < 0:
+			self._life = 0
+
+		if self._shield < 0:
+			self._shield = 0
+
 	def dealtDamages(self):
 		return self._strength
 
@@ -41,8 +47,9 @@ class Character:
 			return False
 
 	def status(self):
-		log.information("Status of: " + name)
-		if self._shield > 0:
+		print("\n\n")
+		log.information("Status of: " + self._name)
+		if self._shield != 0:
 			log.information("Shield: " + str(self._shield))
 		else:
 			log.warning("shield broken !")
