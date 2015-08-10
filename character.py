@@ -8,7 +8,7 @@ import log
 
 class Character:
 
-	def __init__(self, life=5, strength=5, shield=5, xp=0, dodge=0, energy=100, name = "player"):
+	def __init__(self, life=5, strength=5, shield=5, xp=0, dodge=0, energy=100, credits=0, name = "player"):
 		self._life = life
 		self._strength = strength
 		self._shield = shield
@@ -16,6 +16,7 @@ class Character:
 		self._xp = xp
 		self._energy = energy
 		self._name = name
+		self._credits = credits
 
 	def getDamages(self, damages):
 		self._shield = self._shield - damages
@@ -68,3 +69,6 @@ class Character:
 
 	def earnXP(self, val):
 		self._xp = self._xp + val
+
+	def earnCredits(val):
+		self._credits = 0
