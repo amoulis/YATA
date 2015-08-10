@@ -4,6 +4,7 @@ import character
 import random
 import event
 import log
+import utils
 
 # INIT
 player = character.Character()
@@ -30,7 +31,19 @@ while player._life > 0 and order!="quit":
 			else:
 				success = event.eventSpaceStation(player)
 	elif order == "repare":
-		print("reparing...")
+		choice = input("How much energy to you want to consumme for charging shield ? \n >>> ")
+		if utils.isInt(choice):
+			if player._energy - int(choice) >= 0:
+				player._energy = player._energy - int(choice)
+				player._shield = player._shield + int(choice)
+				if player._shield > player._shieldMax:
+					player._shield = player._shieldMax
+				log.information("Shield repared !")
+			else:
+				log.warning("You don't have enough energy to do that")
+		else:
+			log.debug("Not a good option. Try again please")
+
 	elif order == "save":
 		print("saving...")
 	elif order == "status":

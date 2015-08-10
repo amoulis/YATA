@@ -19,6 +19,7 @@ class Character:
 		self._credits = credits
 		self._lifeMax = life
 		self._energyMax = energy
+		self._shieldMax = shield
 
 	def getDamages(self, damages):
 		self._shield = self._shield - damages
@@ -81,3 +82,6 @@ class Character:
 
 	def increaseLifeMax(self, val):
 		self._lifeMax = self._lifeMax + val
+
+	def increaseShieldMax(self, val):
+		self._shieldMax = self._shieldMax + val
