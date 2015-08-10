@@ -24,6 +24,8 @@ class Character:
 			self._life = self.life + self._shield; # because shield < 0 no need to use '-'
 			self._shield = 0
 			log.warning("shield broken !")
+		if self._shield == 0:
+			self._life = self._life - damages
 
 		if self._life < 0:
 			self._life = 0

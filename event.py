@@ -12,7 +12,7 @@ def eventBattle(player):
 	ennemy = character.Character(5, 1, 5, 0, 0, 10, "ennemy")
 	# Fight !
 	turn = 0
-	while ennemy._life != 0 or player._life != 0:
+	while ennemy._life != 0 and player._life != 0:
 		order = input("What do you want to do ? [fight - escape - status] \n >>>")
 		if order == "fight":
 			if turn%2 == 0: # player's turn
@@ -34,7 +34,7 @@ def eventBattle(player):
 		turn = turn + 1
 
 	if ennemy._life == 0 and player._life != 0:
-		log.sucess("You defeated the ennemy !")
+		log.success("You defeated the ennemy !")
 		return True
 	elif player._life == 0 and ennemy._life != 0:
 		log.failure("You've been defeated !")
