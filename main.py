@@ -13,7 +13,7 @@ order = "go"
 success = True
 # DAEMON
 while player._life > 0 and order!="quit":
-	order = input("What do you want to do ? [move - repare - save - quit]\n >>> ")
+	order = input("What do you want to do ? [move - repare - status - save - quit]\n >>> ")
 
 	if order == "move":
 		if player.isEnergyEmpty():
@@ -33,6 +33,8 @@ while player._life > 0 and order!="quit":
 		print("reparing...")
 	elif order == "save":
 		print("saving...")
+	elif order == "status":
+		player.status()
 	else:
 		if order != "quit":
 			print("Sorry not a valid option. Try again please")
