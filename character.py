@@ -42,11 +42,14 @@ class Character:
 		if self._shield > 0:
 			print("Shield: " + str(self._shield))
 		else:
-			print("[WARN] shield broken !")
-		if self._energy < 10:
-			print("[WARN] energy low")
-		print("Energy: " + str(self._energy))
-		print("Strengh: " + str(self._strength))
-		print("Life: " + str(self._life))
-		print("Dodge: " + str(self._dodge))
-		print("XP: " + str(self._xp))
+			log.warning("shield broken !")
+		if self._energy < 10 and self._energy > 0:
+			log.warning("energy low")
+		elif self._energy == 0:
+			log.critical("Energy Empty")
+
+		log.info("Energy: " + str(self._energy))
+		log.info("Strengh: " + str(self._strength))
+		log.info("Life: " + str(self._life))
+		log.info("Dodge: " + str(self._dodge))
+		log.info("XP: " + str(self._xp))
