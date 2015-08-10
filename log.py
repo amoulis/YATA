@@ -4,5 +4,8 @@ def warning(str):
 def critical(str):
 	print("[CRIT] " + str)
 
-def informartion(str):
+def information(str):
 	print("[INFO] " + str)
+
+def success(str)
+	print("[SUCC] " + str)
