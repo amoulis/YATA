@@ -17,6 +17,8 @@ class Character:
 		self._energy = energy
 		self._name = name
 		self._credits = credits
+		self._lifeMax = life
+		self._energyMax = energy
 
 	def getDamages(self, damages):
 		self._shield = self._shield - damages
@@ -66,9 +68,16 @@ class Character:
 		log.information("Life: " + str(self._life))
 		log.information("Dodge: " + str(self._dodge))
 		log.information("XP: " + str(self._xp))
+		log.information("Credits: " + str(self._credits))
 
 	def earnXP(self, val):
 		self._xp = self._xp + val
 
-	def earnCredits(val):
-		self._credits = 0
+	def earnCredits(self, val):
+		self._credits = self._credits + val
+
+	def increaseEnergyMax(self, val):
+		self._energyMax = self._energyMax + val
+
+	def increaseLifeMax(self, val):
+		self._lifeMax = self._lifeMax + val
