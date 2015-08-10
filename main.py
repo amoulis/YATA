@@ -3,13 +3,15 @@
 import character
 import random
 import event
+import log
 
 # INIT
 player = character.Character()
-ennemy = character.Character(5, 1, 5, 0, 0)
 random.seed(); # random event
 
 order = "go"
+success = True
+# DAEMON
 while player._life > 0 and order!="quit":
 	order = input("What do you want to do ? [move - repare - save - quit]\n >>> ")
 
@@ -22,11 +24,11 @@ while player._life > 0 and order!="quit":
 			player._energy = player._energy-1
 			rand_event = random.randint(1,3)
 			if rand_event == 1:
-				event.eventNothing()
+				success = event.eventNothing()
 			elif rand_event == 2:
-				event.eventBattle()
+				success = event.eventBattle()
 			else:
-				event.eventSpaceStation()
+				success = event.eventSpaceStation()
 	elif order == "repare":
 		print("reparing...")
 	elif order == "save":
@@ -34,3 +36,6 @@ while player._life > 0 and order!="quit":
 	else:
 		if order != "quit":
 			print("Sorry not a valid option. Try again please")
+
+	if player._life == 0 or sucess == False:
+		event.gameOver()
