@@ -14,6 +14,7 @@ def saveGame(player):
 		f.write( str(player._energyMax)+ "\n")
 		f.write( str(player._shieldMax)+ "\n")
 		f.write( str(player._lifeMax)+ "\n")
+		f.close()
 		print("File saved as " + name)
 	else:
 		print("Sorry error in name of file try again")
@@ -34,6 +35,7 @@ def loadGame(player):
 		player._energyMax = int(f.readline())
 		player._shieldMax = int(f.readline())
 		player._lifeMax = int(f.readline())
+		f.close()
 		print("Game loaded !");
 	else:
 		print("Sorry error in name of file try again")
