@@ -5,6 +5,7 @@ import random
 import event
 import log
 import utils
+import save
 
 # INIT
 player = character.Character()
@@ -14,7 +15,7 @@ order = "go"
 success = True
 # DAEMON
 while player._life > 0 and order!="quit":
-	order = input("What do you want to do ? [move - repare - status - save - quit]\n >>> ")
+	order = input("What do you want to do ? [move - repare - status - save - load - quit]\n >>> ")
 
 	if order == "move":
 		if player.isEnergyEmpty():
@@ -45,7 +46,9 @@ while player._life > 0 and order!="quit":
 			log.debug("Not a good option. Try again please")
 
 	elif order == "save":
-		print("saving...")
+		save.saveGame(player)
+	elif order == "load":
+		save.loadGame(player)
 	elif order == "status":
 		player.status()
 	else:
