@@ -71,6 +71,7 @@ class Character:
 		log.information("Dodge: " + str(self._dodge))
 		log.information("XP: " + str(self._xp))
 		log.information("Credits: " + str(self._credits))
+		log.information("Level: " + str(self._level))
 
 	def earnXP(self, val):
 		self._xp = self._xp + val
@@ -86,3 +87,9 @@ class Character:
 
 	def increaseShieldMax(self, val):
 		self._shieldMax = self._shieldMax + val
+
+	def levelUp(self):
+		if self._xp > self._level * 1000:
+			self._xp = 0
+			self._level = self._level + 1
+			log.success("You leveled up !")
