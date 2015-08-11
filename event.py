@@ -9,7 +9,7 @@ def eventNothing():
 def eventBattle(player):
 	print("Woaw ! An ennemy ship is here. Get ready for battle !")
 	# generate ennemy ship
-	ennemy = character.Character(5, 1, 5, 0, 0, 10, 0, "ennemy")
+	ennemy = character.Character(5, 1, 5, 0, 0, 10, 0, 1, "ennemy")
 	# Fight !
 	turn = 0
 	while ennemy._life != 0 and player._life != 0:

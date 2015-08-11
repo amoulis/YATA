@@ -19,7 +19,7 @@ while player._life > 0 and order!="quit":
 
 	if order == "move":
 		if player.isEnergyEmpty():
-			print("You have no more energy. You will die alone, drifting in space")
+			log.failure("You have no more energy. You will die alone, drifting in space")
 			event.gameOver()
 			break;
 		else:

@@ -14,6 +14,7 @@ def saveGame(player):
 		f.write( str(player._energyMax)+ "\n")
 		f.write( str(player._shieldMax)+ "\n")
 		f.write( str(player._lifeMax)+ "\n")
+		f.write( str(player._level)+ "\n")
 		f.close()
 		print("File saved as " + name)
 	else:
@@ -35,6 +36,7 @@ def loadGame(player):
 		player._energyMax = int(f.readline())
 		player._shieldMax = int(f.readline())
 		player._lifeMax = int(f.readline())
+		player._level = int(f.readline())
 		f.close()
 		print("Game loaded !");
 	else:
