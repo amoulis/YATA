@@ -1,6 +1,7 @@
 import character
 import log
 import random
+import actions
 
 def eventNothing():
 	print("The planet you found is empty, nothing to be done")
@@ -52,20 +53,9 @@ def eventSpaceStation(player):
 	while choice != "move":
 		choice = input("What do you want to do ? [recharge (10 credit for one cell) \n repare (50 credits) \n status \n move]\n >>> ")
 		if choice == "repare":
-			if player._credits - 50 >= 0:
-				player._life = player._lifeMax;
-				player._credits = player._credits - 50
-				log.information("Repare done !")
-			else:
-				log.warning("Sorry, you don't ahve enough credits")
+			actions.actionRepare(player)
 		if choice == "recharge":
-			if player._credits - 10 >= 0:
-				player._energy = player._energy + 1
-				player._credits = player._credits - 10
-				if player._energy > player._energyMax:
-					player._energy = player._energyMax
-			else:
-				log.warning("Sorry, you don't have enough credits")
+			actions.actionRecharge(player)
 		if choice == "status":
 			player.status()
 	return True
