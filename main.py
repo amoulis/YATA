@@ -6,9 +6,11 @@ import event
 import log
 import utils
 import save
+import menu
 
 # INIT
 player = character.Character()
+menu.menu(player)
 random.seed(); # random event
 
 order = "go"
