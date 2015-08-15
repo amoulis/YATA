@@ -51,7 +51,7 @@ def eventSpaceStation(player):
 	print("Welcome to a friendly space station. You can do some business here")
 	choice =""
 	while choice != "move":
-		choice = input("What do you want to do ? [recharge (10 credit for one cell) \n repare (50 credits) \n status \n move]\n >>> ")
+		choice = input("What do you want to do ? [recharge (10 credits for one cell) \n repare (50 credits) \n status \n move]\n >>> ")
 		if choice == "repare":
 			actions.actionRepare(player)
 		if choice == "recharge":
