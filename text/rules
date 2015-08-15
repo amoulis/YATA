@@ -1,0 +1,13 @@
+Welcome to YATA, a space adventure.
+YATA (Yet Another Text Adventure) is a text based adventure in space where you control a spaceship.
+You're goal is to explore and go as far as possible.
+
+At each state,or event of the game different actions would be possible. You would just have to type the action you want to use.
+Example:
+<<
+	What do you want to do ? [move - repare - status - save - load - quit]
+	 >>>
+ >>
+In this example type 'move' and then enter and your ship would go to the next planet or event. 'save' and enter to save game and so on...
+
+That's all you need to know to be able to play !
