@@ -7,6 +7,7 @@ import log
 import utils
 import save
 import menu
+import os
 
 # INIT
 player = character.Character()
@@ -16,7 +17,7 @@ random.seed(); # random event
 order = "go"
 success = True
 # DAEMON
-
+os.system('cls')
 utils.printFile("text/intro")
 
 while player._life > 0 and order!="quit":
