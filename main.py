@@ -16,6 +16,9 @@ random.seed(); # random event
 order = "go"
 success = True
 # DAEMON
+
+utils.printFile("text/intro")
+
 while player._life > 0 and order!="quit":
 	order = input("What do you want to do ? [move - repare - status - save - load - quit]\n >>> ")
 
